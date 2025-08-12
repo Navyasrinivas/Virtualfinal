@@ -7,4 +7,4 @@ variable "resource_group_name" {
   type        = string
   description = "Azure Resource Group"
   default = "rg-cp-navya-kongala"
- 
+}
