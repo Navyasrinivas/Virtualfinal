@@ -16,7 +16,7 @@ data "azurerm_resource_group" "existing" {
 }
 
 resource "azurerm_virtual_network" "vnet" {
-  name                = "windows-vnetfinal2"
+  name                = "windowsvnetfinal2"
   address_space       = ["10.0.0.0/16"]
   location            = data.azurerm_resource_group.existing.location
   resource_group_name = data.azurerm_resource_group.existing.name
@@ -29,7 +29,7 @@ resource "azurerm_virtual_network" "vnet" {
 }
 
 resource "azurerm_subnet" "subnet" {
-  name                 = "windows-subnetfinal2"
+  name                 = "windowssubnetfinal2"
   resource_group_name  = data.azurerm_resource_group.existing.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.1.0/24"]
@@ -37,7 +37,7 @@ resource "azurerm_subnet" "subnet" {
 }
 
 resource "azurerm_network_interface" "nic" {
-  name                = "windows-nicfinal2"
+  name                = "windowsnicfinal2"
   location            = data.azurerm_resource_group.existing.location
   resource_group_name = data.azurerm_resource_group.existing.name
 
