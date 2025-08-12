@@ -71,6 +71,6 @@ version = "latest"
 # tags
 tags = {
 Environment = "Dev"
-Owner = "navya.kongala@kyndryl.com"
+Owner = "Navya"
 }
 }
